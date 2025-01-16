@@ -98,3 +98,13 @@ const soccerSquad = [
     fouls: 0,
   },
 ];
+
+//Funzione che genera un numero random compreso tra due numeri
+function randomNums(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+for (let i in soccerSquad) {
+  soccerSquad[i].score = randomNums(0, 10);
+  soccerSquad[i].fouls = randomNums(0, 10);
+}
