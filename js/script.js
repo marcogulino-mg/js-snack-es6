@@ -99,12 +99,23 @@ const soccerSquad = [
   },
 ];
 
+//Array di oggetti vuoto
+const sqdNameFouls = [];
+
 //Funzione che genera un numero random compreso tra due numeri
 function randomNums(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+//Inserisco un numero random nel valore di ogni chiave
 for (let i in soccerSquad) {
   soccerSquad[i].score = randomNums(0, 10);
   soccerSquad[i].fouls = randomNums(0, 10);
+
+  //Riempio l'array di oggetti sqdNameFouls con
+  //le proprietà squadName e fouls dell'array precedente
+  sqdNameFouls.push({squadName: soccerSquad[i].squadName, fouls: soccerSquad[i].fouls});
 }
+
+console.table(soccerSquad);
+console.table(sqdNameFouls);
