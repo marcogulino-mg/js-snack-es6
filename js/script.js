@@ -1,5 +1,7 @@
 //Snack 1
 //Creo un array di oggetti
+console.log("SNACK 1");
+
 const racingBike = [
   {
     name: "nome1",
@@ -42,3 +44,57 @@ for (let key in racingBike) {
 }
 
 console.log(lighterBike);
+
+//Snack 2
+//Creo un array di oggetti
+console.log("SNACK 2");
+
+const soccerSquad = [
+  {
+    squadName: "Roma",
+    score: 0,
+    fouls: 0,
+  },
+
+  {
+    squadName: "Milan",
+    score: 0,
+    fouls: 0,
+  },
+
+  {
+    squadName: "Juventus",
+    score: 0,
+    fouls: 0,
+  },
+
+  {
+    squadName: "Torino",
+    score: 0,
+    fouls: 0,
+  },
+
+  {
+    squadName: "Sampdoria",
+    score: 0,
+    fouls: 0,
+  },
+
+  {
+    squadName: "Udinese",
+    score: 0,
+    fouls: 0,
+  },
+
+  {
+    squadName: "Napoli",
+    score: 0,
+    fouls: 0,
+  },
+
+  {
+    squadName: "Atalanta",
+    score: 0,
+    fouls: 0,
+  },
+];
