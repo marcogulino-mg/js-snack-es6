@@ -1,6 +1,7 @@
 //Snack 1
-//Creo un array di oggetti
 console.log("SNACK 1");
+
+//Creo un array di oggetti
 
 const racingBike = [
   {
@@ -46,8 +47,9 @@ for (let key in racingBike) {
 console.log(lighterBike);
 
 //Snack 2
-//Creo un array di oggetti
 console.log("SNACK 2");
+
+//Creo un array di oggetti
 
 const soccerSquad = [
   {
@@ -114,8 +116,43 @@ for (let i in soccerSquad) {
 
   //Riempio l'array di oggetti sqdNameFouls con
   //le proprietà squadName e fouls dell'array precedente
-  sqdNameFouls.push({squadName: soccerSquad[i].squadName, fouls: soccerSquad[i].fouls});
+  sqdNameFouls.push({
+    squadName: soccerSquad[i].squadName,
+    fouls: soccerSquad[i].fouls,
+  });
 }
 
 console.table(soccerSquad);
 console.table(sqdNameFouls);
+
+//Snack 3
+console.log("SNACK 3");
+
+//Funzione che restituisce una lista di numeri compresi
+//tra 2 valori specificati dall'utente
+function numbersBetween(x, y) {
+  const tempArr = [];
+
+  for (x = x + 1; x < y; x++) {
+    tempArr.push(x);
+  }
+
+  return tempArr;
+}
+
+//VARs
+let num1 = parseInt(prompt("Inserisci il primo numero"));
+let num2 = parseInt(prompt("Inserisci il secondo numero"));
+
+//Richiamo funzione
+if (num1 > num2) {
+  console.log("ERRORE! Il primo numero è più grande del secondo.");
+} else if (num1 === num2) {
+  console.log("ERRORE! Il primo numero è uguale al secondo.");
+} else {
+  const listNums = numbersBetween(num1, num2);
+  console.log(`Ecco i numeri compresi tra ${num1} e ${num2}`);
+  for (let j = 0; j < listNums.length; j++) {
+    console.log(listNums[j]);
+  }
+}
