@@ -31,3 +31,14 @@ const racingBike = [
     weight: 100,
   },
 ];
+
+//Stampo a schermo la bici da corsa con il peso minore
+let lighterBike = 0;
+
+for (let key in racingBike) {
+  if (lighterBike == 0 || lighterBike > racingBike[key].weight) {
+    lighterBike = racingBike[key].weight;
+  }
+}
+
+console.log(lighterBike);
